@@ -28,7 +28,7 @@ function Home() {
             setIsLoaded(true)
             console.log("error")
             console.log(error)
-            setItems(error)
+            setError(error)
           }
         )
       return;
@@ -43,14 +43,6 @@ function Home() {
 
 
       <select lass="form" id="select" required onChange={event => setHour(event.target.value)}>
-
-        <option value="10:00">10h00</option>
-        <option value="10:30">10h30</option>
-        <option value="11:00">11h00</option>
-        <option value="11:30">11h30</option>
-        <option value="12:00">12h00</option>
-        <option value="12:30">12h30</option>
-
         {arrayHour.map(hour => (
           <option value={hour}>{hour}</option>
         ))}
